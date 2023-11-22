@@ -1,0 +1,18 @@
+#define RELAY_PIN 2  // Change this to the appropriate pin
+#define SWITCH_PIN 3 // Change this to the appropriate pin for manual control
+
+void setup() {
+  pinMode(RELAY_PIN, OUTPUT);
+  pinMode(SWITCH_PIN, INPUT);
+}
+
+void loop() {
+  // Manual control using switch
+  if (digitalRead(SWITCH_PIN) == HIGH) {
+    digitalWrite(RELAY_PIN, HIGH); // Turn on the switch
+  } else {
+    digitalWrite(RELAY_PIN, LOW);  // Turn off the switch
+  }
+  
+  // Add Bluetooth control logic if using a Bluetooth module
+}
